@@ -65,6 +65,9 @@ func_def : type_name ID '(' list_param ')' '{' list '}' {
                     errorCount++;
                     yyerror("ID already used");
                }
+               else {
+                    current->addVar($1, $2);
+               }
          }
          ;
 
