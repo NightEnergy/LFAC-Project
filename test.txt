@@ -1,0 +1,26 @@
+int x;
+float y;
+char c;
+string s;
+int x;
+int a, b;
+
+int func1(int a, float b) {
+    return asib;
+}
+
+int f2(char m) {}
+int f2(char m) {} 
+
+incepe_progr
+x <- 10;
+a <- x;
+x <- a;
+
+func1(a, x);
+f2(c);
+f2(x);
+
+
+
+incheie_progr
