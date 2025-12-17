@@ -2,15 +2,30 @@ int x;
 float y;
 char c;
 string s;
-int x;
+bool ok;
 int a, b;
+
+clasa Car {
+    int model;
+    string Engine() {
+        intoarce s;
+    }
+    bool modelFin(int an) {
+        daca(model > 5) {
+            model <- 1;
+        }
+        altfel {
+            model <- 2;
+        }
+        intoarce ok;
+    }
+};
 
 int func1(int a, float b) {
     return asib;
 }
 
 int f2(char m) {}
-int f2(char m) {} 
 
 incepe_progr
 x <- 10;

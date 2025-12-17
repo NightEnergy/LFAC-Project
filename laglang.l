@@ -5,7 +5,7 @@
 %}
 %option noyywrap
 %%
-"int"|"float"|"char"|"string"|"bool" {yylval.Str = new std::string(yytext); return TYPE;}
+"int"|"float"|"char"|"string"|"bool"|"void" {yylval.Str = new std::string(yytext); return TYPE;}
 "incepe_progr" {return BGIN;}
 "incheie_progr" {return END;}
 "cat_timp" {return WHILE;}

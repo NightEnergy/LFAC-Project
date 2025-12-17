@@ -100,10 +100,11 @@ list_elem : ID
             ;
 
 list_param : param
-            | list_param ','  param 
-            ;
+           | list_param ','  param 
+           ;
 
-param : TYPE ID 
+param : /*empty func*/
+      | TYPE ID
       ; 
       
 main : BGIN main_list END  
