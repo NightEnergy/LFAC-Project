@@ -25,6 +25,10 @@ int errorCount = 0;
 //%destructor { delete $$; } <Str> 
 
 %token BGIN END ASSIGN NR WHILE EQ NEQ GE LE AND OR PRINT IF ELSE RETURN CLASS NEW DOT
+
+%left '+' '-'
+%left '*' '/'
+
 %nonassoc LOWER_THAN_ELSE
 %nonassoc ELSE
 %token<Str> ID TYPE
@@ -160,8 +164,12 @@ block : '{' list '}'
 
 expr : var
      | NR
-     | NEW ID
      | call
+     | expr '+' expr
+     | expr '*' expr
+     | expr '-' expr
+     | expr '/' expr
+     | '(' expr ')'
      ;
 
 call : var '(' call_list ')'
