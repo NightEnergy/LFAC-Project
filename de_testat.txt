@@ -1,0 +1,37 @@
+Functionalitatea tipurilor:
+    -int
+    -float
+    -string
+    -bool
+Declarari globale si locale
+Atribuirea valorilor (inclusiv booleene)
+
+Operatii aritmetice: +, -, *, /
+Numerele negative
+Comparatii
+AND si OR
+
+Comenzile IF/ELSE
+Comanda WHILE
+In astea 2 de mai sus testeaza cu acolade si fara
+
+Definirea, apelul si returnarea expresiilor pentru functii
+Daca reusesti sa testezi si o recursivitate ar fi super
+
+Clase
+tot ce inseamna membrii, metode, accesul lor, apelul functiilor, blabla
+
+optional: Comentarii
+nu sunt sigur daca functioneaza cum trebuie in mijlocul codului dar eh, nu cred ca e asa de important
+
+!!NU UITA!!
+La fiecare testare sa verifici si tables.txt sa fie corect facut
+In teorie ar trebui sa iti apara pentru fiecare functie si clasa tot ce ai definit in ele, las un exemplu ca sa intelegi
+Poti sa folosesti si chatgpt, chiar sugerez
+
+in caz de ai uitat, compilezi in terminal prin 
+    ./compile.sh laglang
+si verifici fisiere prin
+    ./laglang test.txt
+
+tyty <33

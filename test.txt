@@ -1,41 +1,43 @@
-int x;
-float y;
-char c;
-string s;
-bool ok;
-int a, b;
+int globalVar;
 
-clasa Car {
-    int model;
-    string Engine() {
-        intoarce s;
+class Calculator {
+    int factor;
+    
+    int multiply(int val) {
+        return val * factor;
     }
-    bool modelFin(int an) {
-        daca(model > 5) {
-            model <- model - 1;
-        }
-        altfel {
-            model <- model + 2;
-        }
-        intoarce ok;
+
+    void setFactor(int f) {
+        factor <- f;
     }
 };
 
-int func1(int a, float b) {
-    return asib;
+int factorial(int n) {
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
 }
 
-int f2(char m) {}
-
-incepe_progr
-x <- 10;
-a <- x;
-x <- a;
-
-func1(a, x);
-f2(c);
-f2(x);
-
-
-
-incheie_progr
+begin_progr
+    globalVar <- 10;
+    
+    Calculator calc;
+    calc.setFactor(2);
+    
+    int result;
+    result <- calc.multiply(globalVar); 
+    Print(result);
+    
+    int f;
+    f <- factorial(5);
+    Print(f);
+    
+    if (f > 100) {
+        Print("Factorial is big");
+        int i;
+        i <- 0;
+        while(i < 3) {
+            Print(i);
+            i <- i + 1;
+        }
+    }
+end_progr

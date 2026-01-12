@@ -1,0 +1,24 @@
+Scope: global
+  Name: factorial | Type: int | Cat: func | Params: (int n)
+  Name: globalVar | Type: int | Cat: var | Val: 10
+-----------------------------------
+Scope: class_Calculator
+  Name: factor | Type: int | Cat: var | Val: 2
+  Name: multiply | Type: int | Cat: func | Params: (int val)
+  Name: setFactor | Type: void | Cat: func | Params: (int f)
+-----------------------------------
+Scope: func_multiply
+  Name: val | Type: int | Cat: var | Val: 0
+-----------------------------------
+Scope: func_setFactor
+  Name: f | Type: int | Cat: var | Val: 0
+-----------------------------------
+Scope: func_factorial
+  Name: n | Type: int | Cat: var | Val: 0
+-----------------------------------
+Scope: main
+  Name: calc | Type: Calculator | Cat: var
+  Name: f | Type: int | Cat: var | Val: 120
+  Name: i | Type: int | Cat: var | Val: 3
+  Name: result | Type: int | Cat: var | Val: 20
+-----------------------------------
