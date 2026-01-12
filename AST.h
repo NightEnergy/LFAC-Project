@@ -6,7 +6,6 @@
 
 using namespace std;
 
-// Functie helper pentru erori fatale cu linie
 inline void fatalError(string msg, int line = -1) {
     cerr << "[Runtime/Semantic Error";
     if(line != -1) cerr << " at line " << line;
@@ -14,7 +13,6 @@ inline void fatalError(string msg, int line = -1) {
     exit(1);
 }
 
-// Structura pentru a propaga valoarea RETURN prin stiva de apeluri
 struct ReturnException {
     Value val;
     ReturnException(Value v) : val(v) {}
@@ -42,7 +40,6 @@ public:
     }
 };
 
-// --- ReturnNode (NOU) ---
 class ReturnNode : public ASTNode {
     ASTNode* expr;
 public:
@@ -50,7 +47,7 @@ public:
     string getType() override { return expr->getType(); }
     Value eval() override {
         Value v = expr->eval();
-        throw ReturnException(v); // Intrerupe executia si trimite valoarea sus
+        throw ReturnException(v);
     }
 };
 
@@ -184,10 +181,9 @@ public:
 
         if(funcInfo->funcBody) {
              try {
-                 // Incercam sa executam. Daca intalneste RETURN, va arunca exceptie.
                  funcInfo->funcBody->eval();
              } catch (ReturnException& e) {
-                 res = e.val; // Prindem valoarea returnata
+                 res = e.val;
              }
              
              if(funcInfo->type == "void") res.type = "void"; 

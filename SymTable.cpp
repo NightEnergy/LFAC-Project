@@ -60,7 +60,6 @@ void SymTable::printTable(ofstream& out) {
              else if(val.type == "string") out << " | Val: " << val.value.sVal;
              else if(val.type == "bool") out << " | Val: " << (val.value.bVal ? "true" : "false");
         }
-        // CERINTA II: Parameters info
         else if (val.category == "func") {
             out << " | Params: (";
             for(size_t i=0; i<val.paramTypes.size(); ++i) {
