@@ -1,0 +1,5 @@
+begin_progr
+    int y;
+    y <- 10;
+    x <- 5;
+end_progr

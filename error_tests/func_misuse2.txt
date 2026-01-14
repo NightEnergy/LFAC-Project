@@ -1,0 +1,8 @@
+int aduna(int a, int b) {
+    return a + b;
+}
+begin_progr
+    int rez;
+    rez <- aduna(5, true);
+end_progr
+

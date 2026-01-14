@@ -1,0 +1,4 @@
+begin_progr
+    int i;
+    i <- "text";
+end_progr

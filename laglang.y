@@ -70,10 +70,10 @@ progr : global_declarations main
       }
       ;
 
-global_declarations : decl | global_declarations decl ;
+global_declarations : /* e */ | global_declarations decl ;
 decl : class_def | func_def | var_decl_global ;
 
-/* DECLARATII GLOBALE (Expansat TYPE/ID) */
+/* DECLARATII GLOBALE */
 var_decl_global 
     : TYPE ID ';' {
         Value v; v.type = *$1; 
@@ -89,7 +89,7 @@ var_decl_global
 class_def : CLASS ID { enterScope("class_" + *$2); } '{' class_block '}' ';' { exitScope(); };
 class_block : /* e */ | class_block var_decl_global | class_block func_def;
 
-/* FUNCTII (Expansat TYPE/ID) */
+/* FUNCTII */
 func_def 
     : TYPE ID '(' { 
         currentFuncName = *$2;
@@ -146,7 +146,7 @@ block : '{' list_statements '}' { $$ = $2; };
 list_statements : /* e */ { $$ = new BlockNode(); }
                 | list_statements statement { if($2) $1->addStatement($2); $$ = $1; };
 
-/* DECLARATII LOCALE (Expansat TYPE/ID pentru a evita conflictul cu Assignment/Call) */
+/* DECLARATII LOCALE */
 var_decl_local 
     : TYPE ID ';' { 
         Value v; v.type = *$1; currentScope->addVar(*$2, *$1, v); 

@@ -1,4 +1,7 @@
 #include "SymTable.h"
+#include "AST.h"
+
+extern int yylineno;
 
 SymTable::SymTable(string name, SymTable* p) : scopeName(name), parent(p) {}
 
@@ -19,6 +22,10 @@ IdInfo* SymTable::lookup(string name) {
 }
 
 void SymTable::addVar(string name, string type, Value val) {
+    if (ids.find(name) != ids.end()) {
+        fatalError("Variable '" + name + "' already declared in scope '" + scopeName + "'.", yylineno);
+    }
+    
     IdInfo info(name, type, "var");
     info.value = val;
     info.value.type = type; 
@@ -26,6 +33,10 @@ void SymTable::addVar(string name, string type, Value val) {
 }
 
 void SymTable::addFunc(string name, string returnType, vector<string> pTypes, vector<string> pNames, ASTNode* body) {
+    if (ids.find(name) != ids.end()) {
+        fatalError("Function '" + name + "' already declared.", yylineno);
+    }
+
     IdInfo info(name, returnType, "func");
     info.paramTypes = pTypes;
     info.paramNames = pNames;

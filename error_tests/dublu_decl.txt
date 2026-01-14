@@ -1,0 +1,4 @@
+begin_progr
+    int dublu;
+    int dublu;
+end_progr

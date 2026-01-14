@@ -1,0 +1,4 @@
+begin_progr
+    float f;
+    f <- 10 + 5.5;
+end_progr

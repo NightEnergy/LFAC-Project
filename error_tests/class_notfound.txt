@@ -1,0 +1,13 @@
+class Cutie {
+    int lungime;
+    int latime;
+
+    void setL(int l) {
+        lungime <- l;
+    }
+};
+
+begin_progr
+    Cutie c;
+    c.inaltime <- 10;
+end_progr
