@@ -173,7 +173,13 @@ public:
                  fatalError("Argument " + to_string(i+1) + " of function '" + funcName + 
                             "' mismatch. Expected " + funcInfo->paramTypes[i] + ", got " + argValues[i].type, line);
              }
-             funcScope->addVar(funcInfo->paramNames[i], funcInfo->paramTypes[i], argValues[i]);
+             
+             if (funcScope->existsInCurrentScope(funcInfo->paramNames[i])) {
+                 IdInfo* info = funcScope->lookup(funcInfo->paramNames[i]);
+                 info->value = argValues[i];
+             } else {
+                 funcScope->addVar(funcInfo->paramNames[i], funcInfo->paramTypes[i], argValues[i]);
+             }
         }
 
         Value res;

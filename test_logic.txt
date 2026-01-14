@@ -4,7 +4,6 @@ string hello;
 bool flag;
 
 begin_progr
-    // 1. Arithmetic & Types
     globalX <- 10 + 5 * 2; 
     Print(globalX); // Should print 20
 
@@ -14,13 +13,11 @@ begin_progr
     hello <- "Hello World";
     Print(hello);
 
-    // 2. Negative numbers & Unary minus
     int neg;
     neg <- -5;
     Print(neg); // Should print -5
     Print(10 + -2); // Should print 8
 
-    // 3. Boolean Logic (AND/OR) & Comparison
     flag <- true;
     bool check;
     check <- (globalX > 10) && (neg < 0); 
@@ -29,7 +26,6 @@ begin_progr
     check <- (globalX == 5) || flag;
     Print(check); // Should print true (1)
 
-    // 4. While Loop
     int i;
     i <- 0;
     Print("Starting Loop:");
@@ -38,7 +34,6 @@ begin_progr
         i <- i + 1;
     }
 
-    // 5. If/Else
     if(globalX >= 20) {
         Print("X is big");
     } else {
