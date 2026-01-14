@@ -3,6 +3,8 @@
 TOTAL=0
 PASSED=0
 
+echo -e "ALL should fail"
+
 for testfile in error_tests/*.txt; do
     ((TOTAL++))
     
