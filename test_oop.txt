@@ -1,0 +1,41 @@
+// Class Definition
+class Counter {
+    int count;
+
+    void init(int startVal) {
+        count <- startVal;
+    }
+
+    void add(int val) {
+        count <- count + val;
+    }
+
+    int getCount() {
+        return count;
+    }
+};
+
+// Recursive Function
+int fibonacci(int n) {
+    if (n <= 1) return n;
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+
+begin_progr
+    // 1. Class Logic
+    Counter c;
+    c.init(10);
+    c.add(5);
+
+    int val;
+    val <- c.getCount();
+    Print(val); // Should print 15
+
+    // 2. Recursion Test
+    Print("Fibonacci of 6:");
+    int fib;
+    fib <- fibonacci(6); 
+    // Sequence: 0, 1, 1, 2, 3, 5, 8
+    Print(fib); // Should print 8
+
+end_progr
